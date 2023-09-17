@@ -28,6 +28,7 @@
     "devDependencies": {
         "@vertigis/workflow": "5.34.0",
         "@vertigis/workflow-sdk": "4.0.1",
+        "conventional-changelog-conventionalcommits": "^6.1.0",
         "typescript": "^4.9.5"
     },
     "browserslist": [
