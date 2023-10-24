@@ -81,8 +81,8 @@ export default class AddTextToPdf implements IActivityHandler {
         const doc = await PDFDocument.load(await source.arrayBuffer());
 
         const page = doc.getPage(pageIndex);
-        const stdFont = StandardFonts[fontName];
-        const font = stdFont && (await doc.embedFont(stdFont));
+        const stdFont: string | undefined = StandardFonts[fontName];
+        const font = stdFont ? await doc.embedFont(stdFont) : undefined;
         const rgba = hexToRgba(color);
 
         page.drawText(text, {

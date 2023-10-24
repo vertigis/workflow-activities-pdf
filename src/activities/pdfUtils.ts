@@ -3,7 +3,7 @@
  * @param hex The color hex code.
  * @returns RGBA values between 0 and 1.
  */
-export function hexToRgba(hex: string = "000000FF") {
+export function hexToRgba(hex = "000000FF") {
     hex = hex.replace("#", "");
     const red = parseInt(hex.substring(0, 2), 16) / 255;
     const green = parseInt(hex.substring(2, 4), 16) / 255;
