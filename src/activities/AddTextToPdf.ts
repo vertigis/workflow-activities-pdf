@@ -84,7 +84,7 @@ export default class AddTextToPdf implements IActivityHandler {
         const stdFont = StandardFonts[fontName];
         const font = stdFont && (await doc.embedFont(stdFont));
         const rgba = hexToRgba(color);
-        
+
         page.drawText(text, {
             x,
             y,
