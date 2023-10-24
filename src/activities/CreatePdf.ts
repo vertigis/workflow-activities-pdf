@@ -3,11 +3,11 @@ import { PDFDocument } from "pdf-lib";
 
 interface CreatePdfInputs {
     /**
-     * @description The width of the page in points.
+     * @description The width of the page in points. The default is 595 (A4 paper size).
      */
     pageWidth?: number;
     /**
-     * @description The height of the page in points.
+     * @description The height of the page in points. The default is 842 (A4 paper size).
      */
     pageHeight?: number;
     /**
