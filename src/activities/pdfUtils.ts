@@ -1,18 +1,22 @@
 /**
  * Converts a color hex code into RGBA values.
- * @param hex The color hex code.
+ * @param hexColor The color hex code.
  * @returns RGBA values between 0 and 1.
  */
-export function hexToRgba(hex = "000000FF") {
-    hex = hex.replace("#", "");
-    const red = parseInt(hex.substring(0, 2), 16) / 255;
-    const green = parseInt(hex.substring(2, 4), 16) / 255;
-    const blue = parseInt(hex.substring(4, 6), 16) / 255;
-    const alpha = hex.length > 6 ? parseInt(hex.substring(6, 8), 16) / 255 : 1;
-    return {
-        red,
-        green,
-        blue,
-        alpha,
-    };
+export function hexToRgba(hexColor = "000000FF") {
+    hexColor = hexColor.replace(/^#/, "")
+    if (hexColor.length === 6 || hexColor.length === 8) {
+        const red = parseInt(hexColor.substring(0, 2), 16) / 255;
+        const green = parseInt(hexColor.substring(2, 4), 16) / 255;
+        const blue = parseInt(hexColor.substring(4, 6), 16) / 255;
+        const alpha = hexColor.length === 8 ? parseInt(hexColor.substring(6, 8), 16) / 255 : 1;
+        return {
+            red,
+            green,
+            blue,
+            alpha,
+        };
+    } else {
+        throw new Error(`Invalid hex color '${hexColor}'.`)
+    }
 }
