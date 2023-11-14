@@ -39,6 +39,18 @@ describe("pdfUtils", () => {
             expect(hexToRgba("#ee9933cc")).toStrictEqual(color);
         });
 
+        it("parses hex color parts in correct order", () => {
+            const color: Rgba = {
+                red: 0.0196078431372549,
+                green: 0.5294117647058824,
+                blue: 0.9450980392156862,
+                alpha: 0.25882352941176473,
+            };
+            expect(hexToRgba("0587F142")).toStrictEqual(color);
+            expect(hexToRgba("#0587F142")).toStrictEqual(color);
+            expect(hexToRgba("#0587f142")).toStrictEqual(color);
+        });
+
         it("throws with invalid hex color", () => {
             expect(() => {
                 hexToRgba("ZZZZZZ");
