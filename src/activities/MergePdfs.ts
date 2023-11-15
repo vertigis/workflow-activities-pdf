@@ -38,7 +38,7 @@ export default class MergePdfs implements IActivityHandler {
         }
 
         const pdfBytes = await mergedPdf.save();
-        const result = new Blob([pdfBytes]);
+        const result = new Blob([pdfBytes], { type: "application/pdf" });
 
         return {
             result,
