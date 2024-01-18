@@ -2,6 +2,8 @@ import type { IActivityHandler } from "@vertigis/workflow";
 import { PDFDocument } from "pdf-lib";
 
 interface CreatePdfInputs {
+    /* eslint-disable @typescript-eslint/no-redundant-type-constituents */
+
     /**
      * @description The width of the page in points. The default is 595 (A4 paper size). Use 612 for Letter size.
      */
@@ -30,6 +32,8 @@ interface CreatePdfInputs {
      * @description The keywords to assign to the document.
      */
     keywords?: string[];
+
+    /* eslint-enable @typescript-eslint/no-redundant-type-constituents */
 }
 
 interface CreatePdfOutputs {
