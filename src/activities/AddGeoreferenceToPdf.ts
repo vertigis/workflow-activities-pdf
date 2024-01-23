@@ -10,7 +10,7 @@ import {
 
 export interface AddGeoreferenceToPdfInputs {
     /**
-     * @description The source PDF document to add the georeference metadata to. Either a file path or byte content are accepted.
+     * @description The source PDF document to add the georeference metadata to.
      * @required
      */
     source: Blob;
