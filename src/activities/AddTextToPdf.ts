@@ -3,6 +3,8 @@ import { ColorTypes, PDFDocument, StandardFonts } from "pdf-lib";
 import { hexToRgba } from "./pdfUtils";
 
 interface AddTextToPdfInputs {
+    /* eslint-disable @typescript-eslint/no-redundant-type-constituents */
+
     /**
      * @description The source PDF document to modify.
      * @required
@@ -46,6 +48,8 @@ interface AddTextToPdfInputs {
      * @description The zero-based index of the page to add the text to. The default is 0.
      */
     pageIndex?: number;
+
+    /* eslint-enable @typescript-eslint/no-redundant-type-constituents */
 }
 
 interface AddTextToPdfOutputs {

@@ -3,6 +3,8 @@ import { ColorTypes, PDFDocument, PDFImage } from "pdf-lib";
 import { hexToRgba } from "./pdfUtils";
 
 interface AddImageToPdfInputs {
+    /* eslint-disable @typescript-eslint/no-redundant-type-constituents */
+
     /**
      * @description The source PDF document to modify.
      * @required
@@ -51,6 +53,8 @@ interface AddImageToPdfInputs {
      * @description The zero-based index of the page to add the image to. The default is 0.
      */
     pageIndex?: number;
+
+    /* eslint-enable @typescript-eslint/no-redundant-type-constituents */
 }
 
 interface AddImageToPdfOutputs {

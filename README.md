@@ -11,7 +11,7 @@ This project uses [pdf-lib](https://github.com/Hopding/pdf-lib#readme).
 
 ### VertiGIS Studio Workflow Versions
 
-The PDF activities are designed to work with VertiGIS Studio Workflow versions `5.33` and above.
+The PDF activities are designed to work with VertiGIS Studio Workflow versions `5.37` and above.
 
 ## Usage
 
@@ -26,8 +26,9 @@ To use the PDF activities in [VertiGIS Studio Workflow Designer](https://apps.ve
     - Purpose: `Ready To Use`
     - API: `JavaScript`
     - URL: The URL to this activity pack manifest
-        - Use https://unpkg.com/@vertigis/workflow-activities-pdf/activitypack.json for the latest version
         - Use https://unpkg.com/@vertigis/workflow-activities-pdf@1.0.0/activitypack.json for a specific version
+        - Use https://unpkg.com/@vertigis/workflow-activities-pdf@1/activitypack.json for the latest revision of a specific major version
+        - Use https://unpkg.com/@vertigis/workflow-activities-pdf/activitypack.json for the latest version (not recommended for production use)
         - Use https://localhost:5000/activitypack.json for a local development version
     - Title: Your desired title
     - Tags: Must include `geocortex-workflow-activity-pack`
